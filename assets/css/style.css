@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "Neue";
+  src: url("../fonts/PPNeueMachina-InktrapLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("../fonts/PPNeueMachina-InktrapRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("../fonts/PPNeueMachina-InktrapUltrabold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+
+  .hero {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: -2;
+
+    .hero-1 {
+      background-color: #f3f3f3;
+      height: 50%;
+    }
+
+    .hero-2 {
+      background-color: #303034;
+      height: 50%;
+    }
+  }
+
+  .box-hero {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    .logo-hero {
+      transform: rotate(90deg);
+    }
+
+    h1 {
+      font-family: "Neue";
+      font-weight: 700;
+      color: #000;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-family: "Neue";
+      font-weight: 400;
+      color: #fff;
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
+  .button-scroll {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+
+    .fa-solid.fa-angle-down {
+      color: #8f589c;
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .box-hero {
+      flex-direction: column;
+
+      h1,
+      h2 {
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+  }
+
+  .navbar {
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(243, 243, 243, 0.5);
+    z-index: 999999;
+
+    .navbar-brand {
+      font-family: "Neue";
+      font-weight: 700;
+    }
+
+    .navbar-nav {
+      .nav-link {
+        font-family: "Neue";
+        font-weight: 300;
+        color: #000;
+
+        &:hover {
+          color: #a257a1;
+        }
+      }
+
+      @media (width < 992px) {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        gap: 1rem !important;
+      }
+    }
+  }
+}
+
+main {
+  .section-nosotros {
+    /* padding-top: 10rem;
+    padding-bottom: 10rem; */
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: "Neue";
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+    .row {
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        i {
+          font-size: 5rem;
+          color: #8f589c;
+        }
+      }
+    }
+  }
+
+  .section-servicios {
+    padding: 0;
+    background-color: #303034;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .col-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem;
+      height: auto;
+      min-height: 100vh;
+
+      @media (width < 420px) {
+        padding: 1rem;
+      }
+
+      h2 {
+        font-family: "Neue";
+        font-weight: 700;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        color: #8f589c;
+      }
+      h3 {
+        color: #ffffff;
+        margin: 1.5rem 0;
+      }
+      p {
+        color: #ffffff;
+      }
+      i {
+        font-size: 4rem;
+        color: #8f589c;
+      }
+    }
+    .col-img {
+      height: auto;
+      min-height: 100vh;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #8f589c;
+  color: #ffffff;
+
+  h4 {
+    font-family: "Neue";
+    font-weight: 300;
+  }
+
+  .col-footer-logo {
+    .logo-footer {
+      transform: rotate(90deg);
+    }
+  }
+
+  .instagram-icon {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 767px) {
+    .col-footer {
+      padding-top: 1.5rem;
+      text-align: center;
+
+      .box-footer {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (width < 1400px) {
+  main {
+    .section-nosotros {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+/* Animación de columnas */
+[class*="col-"] {
+  opacity: 0;
+}
