@@ -106,6 +106,14 @@ header {
     background-color: rgba(243, 243, 243, 0.5);
     z-index: 999999;
 
+    .navbar-toggler{
+      border: none;
+
+      &:hover{
+        box-shadow: none;
+      }
+    }
+
     .navbar-brand {
       font-family: "Neue";
       font-weight: 700;
