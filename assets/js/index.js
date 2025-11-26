@@ -1,3 +1,8 @@
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
 const { animate, scroll, inView } = Motion
 
 // Animación del botón de scroll
