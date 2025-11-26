@@ -5,6 +5,37 @@ const lenis = new Lenis({
 
 const { animate, scroll, inView } = Motion
 
+// Animación del hero - logo (Blur + Fade)
+animate('.logo-hero', {
+  opacity: [0, 1],
+  filter: ['blur(10px)', 'blur(0px)'],
+  rotate: [90, 90] // Mantiene la rotación del CSS
+}, {
+  duration: 1.2,
+  delay: 0.2,
+  easing: 'ease-out'
+})
+
+// Animación del hero - h1 (Blur + Fade)
+animate('.box-hero h1', {
+  opacity: [0, 1],
+  filter: ['blur(10px)', 'blur(0px)']
+}, {
+  duration: 1.2,
+  delay: 0.4,
+  easing: 'ease-out'
+})
+
+// Animación del hero - h2 (Blur + Fade)
+animate('.box-hero h2', {
+  opacity: [0, 1],
+  filter: ['blur(10px)', 'blur(0px)']
+}, {
+  duration: 1.2,
+  delay: 0.6,
+  easing: 'ease-out'
+})
+
 // Animación del botón de scroll
 animate('.button-scroll i', { 
   y: [0, -15, 0],
