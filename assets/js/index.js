@@ -1,7 +1,7 @@
 const { animate, scroll, inView } = Motion
 
 // Animación del botón de scroll
-animate('.button-scroll', { 
+animate('.button-scroll i', { 
   y: [0, -15, 0],
 }, {
   duration: 1.5,
